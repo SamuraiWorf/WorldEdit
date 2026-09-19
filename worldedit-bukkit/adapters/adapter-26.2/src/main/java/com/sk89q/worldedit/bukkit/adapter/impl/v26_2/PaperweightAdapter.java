@@ -239,8 +239,8 @@ public final class PaperweightAdapter implements BukkitImplAdapter {
 
         int dataVersion = SharedConstants.getCurrentVersion().dataVersion().version();
         if (dataVersion != Constants.DATA_VERSION_MC_26_2) {
-            if (dataVersion <= Constants.DATA_VERSION_MC_26_1_2) {
-                throw new RuntimeException("Force prevent this loading on <=26.1.2");
+            if (dataVersion <= Constants.DATA_VERSION_MC_26_1_2 || dataVersion > Constants.DATA_VERSION_MC_26_2) {
+                throw new RuntimeException("Force prevent this loading on <=26.1.2 or >26.2");
             }
             logger.warning(WRONG_VERSION);
         }
