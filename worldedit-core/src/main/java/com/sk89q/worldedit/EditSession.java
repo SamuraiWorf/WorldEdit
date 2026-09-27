@@ -2483,7 +2483,7 @@ public class EditSession implements Extent, AutoCloseable {
                     } else {
                         return defaultMaterial;
                     }
-                } catch (ExpressionTimeoutException e) {
+                } catch (ExpressionTimeoutException _) {
                     timedOut[0] = timedOut[0] + 1;
                     return null;
                 } catch (RuntimeException e) {
@@ -3002,7 +3002,7 @@ public class EditSession implements Extent, AutoCloseable {
 
                     // TODO: Allow biome setting via a script variable (needs BiomeType<->int mapping)
                     return defaultBiomeType;
-                } catch (ExpressionTimeoutException e) {
+                } catch (ExpressionTimeoutException _) {
                     timedOut.getAndIncrement();
                     return null;
                 } catch (Exception e) {
